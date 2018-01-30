@@ -105,44 +105,14 @@
     </com.example.xyzreader.ui.ObservableScrollView>
 
 
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:contentDescription="@string/action_share"
-        android:elevation="10dp"
 
-        android:focusableInTouchMode="true"
-        android:stateListAnimator="@anim/fab_state_list_anim"
-        tools:fab_addButtonColorNormal="@color/white"
-        tools:fab_addButtonColorPressed="@color/white_pressed"
-        tools:fab_addButtonPlusIconColor="@color/blue_button"
-        tools:fab_addButtonSize="normal"
-        tools:fab_expandDirection="down"
-        tools:fab_labelStyle="@style/menu_labels_style">
-        <android.support.design.widget.CoordinatorLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-
-            android:layout_height="match_parent">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/share_fab"
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/add_fab_background"
-            app:fab_icon="@drawable/ic_share"
-            tools:fab_colorNormal="@color/white"
-            tools:fab_colorPressed="@color/white_pressed" />
-        </android.support.design.widget.CoordinatorLayout>
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_share"
+            android:layout_margin="16dp" />
 
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
