@@ -1,5 +1,4 @@
-
-    <android.support.design.widget.CoordinatorLayout
+<android.support.design.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/coordinator_layout"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,9 +9,10 @@
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:layout_marginLeft="@dimen/list_toolbar_side_margin"
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
+
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
-            android:layout_gravity="bottom">
+            android:layout_gravity="top">
         </android.support.v7.widget.Toolbar>
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
@@ -25,26 +25,28 @@
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:scrollbarStyle="outsideOverlay"
-            android:paddingTop="116dp"
+            android:paddingBottom="@dimen/list_side_botton"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingBottom="28dp" />
+            android:paddingTop="@dimen/list_side_top" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:background="@color/theme_primary"
-        android:elevation="8dp">
+        android:layout_height="49dp"
 
+        android:background="@color/theme_primary"
+        app:elevation="8dp"
+        tools:layout_editor_absoluteY="-1dp">
 
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/logo"
-                android:contentDescription="@string/app_name" />
+                android:layout_marginLeft="72dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo" />
 
 
     </android.support.design.widget.AppBarLayout>

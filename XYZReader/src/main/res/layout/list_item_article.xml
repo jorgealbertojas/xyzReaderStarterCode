@@ -1,5 +1,4 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,11 +23,9 @@
                 android:background="@color/photo_placeholder" />
 
 
-
-
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="68dp"
             android:orientation="vertical"
             android:background="@color/photo_placeholder" >
 
@@ -36,13 +33,11 @@
                 android:id="@+id/article_title"
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingBottom="4dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:paddingTop="16dp"
                 android:textColor="@color/ltgray"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -54,13 +49,13 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:textColor="@color/ltgray"
                 android:textSize="14sp"
                 tools:layout_editor_absoluteX="0dp" />
-        </LinearLayout>
+        </GridLayout>
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

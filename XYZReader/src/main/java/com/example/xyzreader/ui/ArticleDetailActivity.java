@@ -10,7 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +23,7 @@ import com.example.xyzreader.data.ItemsContract;
 /**
  * An activity representing a single Article detail screen, letting you swipe between articles.
  */
-public class ArticleDetailActivity extends ActionBarActivity
+public class ArticleDetailActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Cursor>{
 
     private Cursor mCursor;
@@ -37,7 +37,7 @@ public class ArticleDetailActivity extends ActionBarActivity
     private MyPagerAdapter mPagerAdapter;
     private View mUpButtonContainer;
     private View mUpButton;
-    private View toolbar_up;
+    private View mToolbarUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class ArticleDetailActivity extends ActionBarActivity
                 mUpButton.animate()
                         .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
                         .setDuration(300);
-                toolbar_up.animate()
+                mToolbarUp.animate()
                         .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
                         .setDuration(300);
             }
@@ -84,7 +84,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         mUpButtonContainer = findViewById(R.id.up_container);
 
         mUpButton = findViewById(R.id.action_up);
-        toolbar_up = findViewById(R.id.teste);
+        mToolbarUp = findViewById(R.id.teste);
 
         mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,8 +164,8 @@ public class ArticleDetailActivity extends ActionBarActivity
     }
 
     private void updateUpToolbarPosition() {
-        int upButtonNormalBottom = mTopInset + toolbar_up.getHeight();
-        toolbar_up.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+        int upButtonNormalBottom = mTopInset + mToolbarUp.getHeight();
+        mToolbarUp.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {
